@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="bars.css" rel="stylesheet">
+</head>
+
+<body>
+    <span class="heading">Visualizing Sorting Algorithms</span>
+    <div id="container">
+        <div class="v-box">
+            <div class="spacer"></div>
+            <div id="bubble" class="visualizer"></div>
+            <span class="heading">Bubble</span>
+        </div>
+        <div class="v-box">
+            <div class="spacer"></div>
+            <div id="selection" class="visualizer"></div>
+            <span class="heading">Selection</span>
+        </div>
+        <div class="v-box">
+            <div class="spacer"></div>
+            <div id="insertion" class="visualizer"></div>
+            <span class="heading">Insertion</span>
+        </div>
+        <div class="c-box">
+            <div class="speed">
+                <input id="speed" type="range" name="speed" min="100" max="1500" step="100" onchange="changeSpeed()">
+                <label for="speed">Speed</label>
+            </div>
+            <button class="sort" onclick="start()">
+                Sort
+            </button>
+            <button class="sort" onclick="reload()">
+                Reload
+            </button>
+            <button class="sort" onclick="reset()">
+                Reset
+            </button>
+        </div>
+    </div>
+
+    <script src="bars.js"></script>
+</body>
+
+</html>
